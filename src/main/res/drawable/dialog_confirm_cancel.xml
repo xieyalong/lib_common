@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 设置背景布局的颜色  没有这个就是一个边框-->
+    <solid android:color="#FFFFFF"/>
+    <!-- 边框四个角的圆度 -->
+    <corners
+        android:bottomLeftRadius="3.7dp"
+        android:topLeftRadius="3.7dp"
+        android:bottomRightRadius="3.7dp"
+        android:topRightRadius="3.7dp"
+        />
+    <!-- 边框设置 -->
+    <stroke
+        android:width="5dp"
+        android:color="#FFFFFF"/>
+</shape>
