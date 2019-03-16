@@ -1,16 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-
-
-
+     compileSdkVersion 28
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion 19
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
@@ -20,23 +16,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    sourceSets {
-        main {
-//            manifest.srcFile 'src/main/AndroidManifest.xml'
-            jniLibs.srcDirs = ['libs']
-        }
-    }
+
 }
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
-    api "com.android.support:appcompat-v7:${V7_APPCOMPAT_VERSION}"
-    api "com.android.support.constraint:constraint-layout:${CONSTRAIT_SUPPORT_VERSION}"
-    implementation "com.android.support:recyclerview-v7:${RECYCLER_VIEW_SUPPORT_VERSION}"
-    api "com.android.support:design:${DESIGIN_SUPPORT_VERSION}"
-    testImplementation "junit:junit:${JUNIT_VERSION}"
-    androidTestImplementation "com.android.support.test:runner:${RUNNER_VERSION}"
-    androidTestImplementation "com.android.support.test.espresso:espresso-core:${ESPRESSO_CORE_VERSION}"
+    //noinspection GradleCompatible
+    api "com.android.support:appcompat-v7:28.0.0"
+    api "com.android.support.constraint:constraint-layout:1.1.3"
+    api "com.android.support:recyclerview-v7:28.0.0"
+    api "com.android.support:design:28.0.0"
+    testImplementation "junit:junit:4.12}"
+    androidTestImplementation "com.android.support.test:runner:1.0.2"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:3.0.2"
     //进程间通讯
     //    api 'org.greenrobot:eventbus:3.1.1'
     api 'com.github.jarryleo:MagicMessenger:v2.0'
@@ -89,4 +81,6 @@ dependencies {
     api 'com.github.yilylong:CBDialog:v1.0.7'
     //toast
     api 'com.github.Shashank02051997:FancyToast-Android:0.1.3'
+    //button  和系统文件values.xml 有冲突
+//    api 'com.github.niniloveyou:StateButton:v1.0.0'
 }
