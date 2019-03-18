@@ -82,6 +82,8 @@ dependencies {
     api 'com.github.yilylong:CBDialog:v1.0.7'
     //toast
     api 'com.github.Shashank02051997:FancyToast-Android:0.1.3'
-    //button  和系统文件com.android.support:appcompat-v7:28.0.0-rc01的values.xml 有冲突
+    //button
+    // 和系统文件com.android.support:appcompat-v7:28.0.0-rc01的values.xml
+    //项目配置是28.0.0
     api 'com.github.niniloveyou:StateButton:v1.0.0'
 }
