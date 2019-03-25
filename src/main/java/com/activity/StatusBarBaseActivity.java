@@ -20,6 +20,9 @@ import android.widget.Toast;
 
 import com.lib_common.R;
 
+/**
+ * 状态栏
+ */
 public abstract class StatusBarBaseActivity extends AppCompatActivity implements View.OnClickListener{
     View mv_baseStatusBar,mv_contentView;
     Toolbar toolBar;
