@@ -20,10 +20,12 @@ import android.widget.Toast;
 
 import com.lib_common.R;
 
+import me.yokeyword.fragmentation.SupportActivity;
+
 /**
  * 状态栏
  */
-public abstract class StatusBarBaseActivity extends AppCompatActivity implements View.OnClickListener{
+public abstract class StatusBarBaseActivity extends SupportActivity implements View.OnClickListener{
     View mv_baseStatusBar,mv_contentView;
     Toolbar toolBar;
     TextView tv_base_title,tv_base_rigtht;
