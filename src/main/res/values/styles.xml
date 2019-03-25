@@ -38,4 +38,20 @@
     </style>
 
     <style name="AppTheme.Main" parent="common_appTheme" />
+
+    <!--StatusBarBaseActivity start-->
+    <style name="ToolbarStyle_status_bar_base" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="actionBarItemBackground">@drawable/abc_item_background_holo_light</item>
+        <item name="selectableItemBackground">@drawable/abc_item_background_holo_light</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme_status_bar_base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/titlebar_main_color</item>
+        <item name="colorPrimaryDark">@color/titlebar_main_color</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+    <!--StatusBarBaseActivity end-->
 </resources>

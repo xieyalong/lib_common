@@ -6,4 +6,8 @@
     <color name="white">#FFFFFF</color>
     <color name="background_holo_dark">#ff000000</color>
     <color name="dialog_bg_color_grey">#EFEFEF</color>
+    <!--正文字段色值-->
+    <color name="text_main_color">#333333</color>
+    <!--页面标题栏主色调-->
+    <color name="titlebar_main_color">#ffce3d3a</color>
 </resources>

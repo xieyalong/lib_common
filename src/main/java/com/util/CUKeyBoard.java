@@ -204,5 +204,80 @@ public class CUKeyBoard {
             }
         }, 100);
     }
+//    -----------------------------整个页面网上滑动-------------------------------------------
+    /**
+     *  1、获取main在窗体的可视区域 可以整个view
+     *  2、获取main在窗体的不可视区域高度
+     *  3、判断不可视区域高度，之前根据经验值，在有些手机上有点不大准，现改成屏幕整体高度的1/3
+     *      1、大于屏幕整体高度的1/3：键盘显示  获取Scroll的窗体坐标
+     *                           算出main需要滚动的高度，使scroll显示。
+     *      2、小于屏幕整体高度的1/3：键盘隐藏
+     *
+     * @param main 根布局
+     * @param scroll 需要显示在哪个下方View
+     */
+    public void addLayoutListener( final View main, final View scroll) {
+        main.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                Rect rect = new Rect();
+                main.getWindowVisibleDisplayFrame(rect);
+                int screenHeight = main.getRootView().getHeight();
+                int mainInvisibleHeight = main.getRootView().getHeight() - rect.bottom;
+                if (mainInvisibleHeight > screenHeight / 4) {
+                    int[] location = new int[2];
+                    scroll.getLocationInWindow(location);
+                    int srollHeight = (location[1] + scroll.getHeight()) - rect.bottom;
+                    main.scrollTo(0, srollHeight);
+                } else {
+                    main.scrollTo(0, 0);
+                }
+            }
+        });
+    }
 
+    /**
+     * EditText 获取焦点时弹起
+     * @param activity
+     * @param ets
+     * @param main
+     * @param scroll
+     */
+    public void addLayoutListener(final Activity activity, final View main, final View scroll, final EditText... ets) {
+        main.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                try {
+                    View rootview = activity.getWindow().getDecorView();
+                    if (null==rootview)return;
+                    View focusView = rootview.findFocus();
+                    if (null==focusView)return;
+                    boolean boo=false;
+                    for(EditText et:ets){
+                        if (et.getId()==focusView.getId()){
+                            boo=true;
+                            break;
+                        }
+                    }
+                    if (!boo){
+                        return;
+                    }
+                    Rect rect = new Rect();
+                    main.getWindowVisibleDisplayFrame(rect);
+                    int screenHeight = main.getRootView().getHeight();
+                    int mainInvisibleHeight = main.getRootView().getHeight() - rect.bottom;
+                    if (mainInvisibleHeight > screenHeight / 4) {
+                        int[] location = new int[2];
+                        scroll.getLocationInWindow(location);
+                        int srollHeight = (location[1] + scroll.getHeight()) - rect.bottom;
+                        main.scrollTo(0, srollHeight);
+                    } else {
+                        main.scrollTo(0, 0);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
 }
