@@ -8,6 +8,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        resValue("bool" , "isLog","true")
+        resValue("string" , "date", "20190327")
+        //1=山东 2=medical
+        resValue("integer" , "url", "2")
     }
 
     buildTypes {
