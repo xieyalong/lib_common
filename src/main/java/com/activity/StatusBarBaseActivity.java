@@ -1,6 +1,7 @@
 package com.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
@@ -31,10 +32,12 @@ public abstract class StatusBarBaseActivity extends SupportActivity implements V
     TextView tv_base_title,tv_base_rigtht;
     ImageView iv_base_back,iv_base_rigtht;
     LinearLayout layout_toolbar;
+  public   Context mContext;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         try {
+            mContext=this;
             if (setContentViewLayout()>0){
                 setContentView(setContentViewLayout());
                 initViewDataBefore();
