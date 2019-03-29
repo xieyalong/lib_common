@@ -1,4 +1,4 @@
-package com.util.Utilc;
+package com.util.utilc;
 
 public class KeyBoardStatus {
     public void keyBoardShow(int height) {

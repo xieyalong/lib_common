@@ -1,4 +1,4 @@
-package com.util.Utilc;
+package com.util.utilc;
 
 import android.view.KeyEvent;
 import android.widget.TextView;
