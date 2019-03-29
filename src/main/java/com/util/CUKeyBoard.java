@@ -15,8 +15,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.CAPP;
-import com.util.Utilc.EditorActionListener;
-import com.util.Utilc.FocusChange;
+import com.util.utilc.EditorActionListener;
+import com.util.utilc.FocusChange;
 
 /**
  * 键盘管理
