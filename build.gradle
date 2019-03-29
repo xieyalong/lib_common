@@ -95,5 +95,6 @@ dependencies {
     //progresspieview（饼图统计）+image-loader=缩略图
     api 'com.github.filippudak.progresspieview:library:1.0.4'
     api 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-
+    //数据库
+    api 'org.litepal.android:java:3.0.0'
 }

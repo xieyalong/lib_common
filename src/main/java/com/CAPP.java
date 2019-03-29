@@ -6,9 +6,13 @@ import android.os.StrictMode;
 
 import com.apkfuns.logutils.LogUtils;
 import com.msg.CUMsg;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.util.CUAPP;
 import com.util.CUActivity;
 import com.zhy.http.okhttp.OkHttpUtils;
+
+import org.litepal.LitePal;
 
 import java.util.concurrent.TimeUnit;
 
@@ -52,6 +56,8 @@ public class CAPP {
         initHttp();
         initFragment();
         initLogUtils();
+        LitePal.initialize(app);
+        ImageLoader.getInstance().init(ImageLoaderConfiguration.createDefault(app.getApplicationContext()));
         return commonAPP;
     }
 

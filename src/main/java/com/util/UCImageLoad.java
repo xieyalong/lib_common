@@ -12,7 +12,6 @@ public class UCImageLoad {
     public  static UCImageLoad getInstance(){
         if (null==intance){
             intance=new UCImageLoad();
-            ImageLoader.getInstance().init(ImageLoaderConfiguration.createDefault(CAPP.getInstanc().getApplicationContext()));
         }
         return  intance;
     }
