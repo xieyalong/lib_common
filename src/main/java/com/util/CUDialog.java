@@ -19,7 +19,7 @@ public class CUDialog {
         if (TextUtils.isEmpty(message)){
             message="正在加载请稍后...";
         }
-      Dialog dialog=  new CBDialogBuilder(activity,CBDialogBuilder.DIALOG_STYLE_PROGRESS, 0.5f)
+        Dialog dialog=  new CBDialogBuilder(activity,CBDialogBuilder.DIALOG_STYLE_PROGRESS, 0.5f)
                 .showCancelButton(true)
                 .setMessage(message)
                 .setDialogAnimation(CBDialogBuilder.DIALOG_ANIM_SLID_BOTTOM)
