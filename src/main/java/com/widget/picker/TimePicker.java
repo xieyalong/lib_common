@@ -201,4 +201,32 @@ public class TimePicker {
         void onTimeSelect(String time);
         void onTimeSelectChanged(Date date);
     }
+	   /**
+     * 当前时间为最大值，往前推120年
+     */
+//    Calendar startDate = Calendar.getInstance();
+//                startDate.setTime(new Date());
+//                startDate.add(Calendar.YEAR, -120);
+//    Calendar endDate = Calendar.getInstance();
+//    Calendar defultDate = Calendar.getInstance();
+//                if (TextUtils.isEmpty(userBean.getBirthday())){
+//        defultDate=endDate;
+//    }else{
+//        SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM-dd");
+//        Date date =sdf.parse(userBean.getBirthday());
+//        defultDate.setTime(date);
+//    }
+//                timePicker.show(bools,startDate,endDate,defultDate,new TimePicker.TimePickerClick() {
+//        @Override
+//        public void onTimeSelect(String t) {
+//            try {
+////                            String entDate = CUTime.getTime_yyyy_MM_dd();
+////                            String age = "" + CUTime.getYearSpace(t, entDate);
+//                tv_nl.setText(t);
+//                tv_nl.setTag("" + t);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    });
 }
